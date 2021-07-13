@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f2e7e0;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.nav-container {
+  padding-top: 55px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-container__img-container__left {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-container__img-container__right {
+    width: 15%;
+  }
+
+  .nav-container__img {
+    width: 40px;
+    object-fit: contain;
+  }
+
+  .nav-container__nav {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+
+    .nav-container__nav__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .nav-container__nav__list__list-item {
+        list-style: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .nav-container__bars {
+    width: 40px;
+    cursor: pointer;
+  }
+}
+
+.hero {
+  padding-top: 70px;
+
+  margin: 0 auto;
+
+  .hero__text {
+    width: 50%;
+  }
+
+  .hero__text span {
+    font-size: 1.5rem;
+  }
+
+  .hero__text__heading {
+    width: 100%;
+    height: 100%;
+    font-size: 6.5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    word-wrap: break-word;
+    line-height: 95px;
+  }
+
+  .hero__text__body-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+
+    .hero__text__button {
+      background: #110906;
+      width: 200px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      transition-duration: 0.5s;
+    }
+    .hero__text__button:hover {
+      background: #f2e7e0;
+      color: #110906;
+      border: 1px solid #110906;
+      transform: scale(1.05);
+    }
+
+    .hero__text__play {
+      border: 1px solid #110906;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      img {
+        width: 20px;
+      }
+    }
+
+    .hero__text__play:hover {
+      transition-duration: 1s;
+      transform: scale(1.2) rotate(360deg);
+      border: 1px solid #d1bba2;
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.video-container {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  width: 25vw;
+  cursor: pointer;
+  // transition-duration: 7s;
+
+
+  .video-container__video {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    border-top-left-radius: 550px;
+    border-top-right-radius: 550px;
+  }
+
+  .video-logo-container {
+    position: relative;
+  }
+
+  .video-logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    z-index: 4;
+    background: none;
+    left: 50%;
+    margin-left: -125px;
+  }
+
+
+  .video-overlay {
+    z-index: 1;
+    border: 1px solid #d1bba2;
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    height: 80vh;
+    width: 100%;
+    border-top-left-radius: 550px;
+    border-top-right-radius: 550px;
+  }
+}
+
+.video-container:hover {
+  position: absolute;
+  right: 200px;
+  bottom: 0;
+
+
+  .video-logo {
+    // animation: roll 3s infinite;
+    transform: rotate(30deg);
+    width: 250px;
+
+  }
+
+  @keyframes roll {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.work {
+  margin-top: 40px;
+  width: 50%;
+
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  .work__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .work__box {
+    position: relative;
+    width: 32%;
+    height: 140px;
+    cursor: pointer;
+    transition-duration: .3s;
+
+    .work__box__body {
+      position: absolute;
+      color: white;
+      bottom: 5px;
+      left: 5px;
+      background: none;
+    }
+
+    .work__box__body::before {
+      content: url("./img/right\ \(1\).svg");
+      position: absolute;
+      right: -40px;
+      bottom: -3px;
+    }
+  }
+
+  .work__box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.2;
+  }
+
+  .work__box:hover {
+    transform: scale(1.2);
+    z-index: 9;
+    border: 1px solid #d1bba2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .work__box.first {
+    background: url("./img/pexels-lara-chara-7665700.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .work__box.second {
+    background: url("./img/pexels-lara-chara-7665701.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .work__box.third {
+    background: url("./img/pexels-lara-chara-7665706.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
